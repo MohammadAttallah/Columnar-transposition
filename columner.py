@@ -84,10 +84,22 @@ def createEmptyMatrix(width, height, length):
   return matrix
 
 
-print( 'The cipher Text: ',
-  encrypt('The nose is pointing down and the houses are getting bigger',
-          'analyst'))
-print('The palin Text: ',
-  decrypt('Teiddorigeitwts gr sinheg h no ueneopga  tiso nhatgn n eseb',
-          'analyst'))
+print('1- For encrypt\n'
+      '2- For decrypt\n')
+choice = int(input('Please, Enter your choice: '))
 
+if choice == 1:
+  plain_text = input('Please, enter your text: ')
+  key = input('Please, Enter the key: ')
+  print('The encrypted text is: ', encrypt(plain_text, key))
+elif choice == 2:
+  cipher_text = input('Please, enter your text: ')
+  key = input('Please, Enter the key: ')
+  print('The plain text is: ', decrypt(cipher_text, key))
+else:
+  print('Your choice is not exist')
+
+  
+#print(encrypt('Germany seeks an alliance', 'norse'))
+#print(decrypt('aealeGnenieyk ar sanms lc', 'norse'))
+# 'The nose is pointing down and the houses are getting bigger' 'analyst'
